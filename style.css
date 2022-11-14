@@ -1,6 +1,10 @@
+body{
+    background-color: black;
+}
 .big-container{
     display: grid;
     grid-template-columns: 2fr 7fr 3fr;
+    grid-template-rows: 1fr 2fr 15fr;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -44,18 +48,70 @@
     align-self: center;
 }
 
-.home{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    align-items: center;
-}
-
 
 .top-row{
     grid-column: 2 / 4;
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr 1fr 2fr;
+    grid-template-columns: 3fr 1fr;
     align-items: center;
+    background-color: white;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.top-left{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.top-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+}
+
+.search-icon{
+    justify-self: flex-end;
+    align-self: center;
+}
+.search-icon img{
+    height: 1.4rem;
+    width: auto;
+    justify-self: center;
+    align-self: center;
+}
+.search-bar{
+    display: grid;
+    justify-content: stretch;
+    height: 100%;
+}
+.search-bar input{
+    background-color: rgb(231, 220, 220);
+    border-radius: 10px;
+    outline: none;
+    border-style: hidden;
+}
+.user-top{
+    font-weight: bold;
+}
+
+.alerts{
+    align-self: center;
+    justify-self: center;
+}
+.alerts img{
+    height: 1.7rem;
+    width: auto;
+}
+
+.user-icon img{
+    height: 2.5rem;
+    width: auto;
 }
 
 .second-row{
@@ -64,38 +120,49 @@
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    gap: 20%;
+    box-shadow: inset 0px -3px 4px rgb(183, 167, 167);
 }
 .my-buttons button{
     background-color: rgb(85, 157, 233);
-    border-radius: 10px;
-    color: white;
-}
-
-.greeting{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-}
-
-.big-icon{
-    grid-row: 1 / 3;
-
+    border-radius: 20px;
+    height: 2.5rem;
+    width: 6rem;
+    outline: none;
+    border-style: hidden;
+    font-weight: bold;
 }
 
 .my-buttons{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    justify-items: center;
 }
 
-.greeting-text{
+.greeting{
     display: grid;
-    grid-row: 1 / 3;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    justify-items: center;
     align-items: center;
-    justify-content: center;
+}
+
+.greeting p{
+    justify-self: flex-start;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.big-icon{
+    height: 100%;
+    width: auto;
+}
+
+
+.big-oak{
+    font-size: 1.3rem;
+    align-self: flex-start;
 }
 
 .projects{
@@ -103,15 +170,115 @@
     display: grid;
     grid-template-rows: 1fr 15fr;
     gap: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 4%;
+    /* box-shadow: 0px -3px 4px rgb(183, 167, 167); */
+}
+
+.your-projects{
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
 }
 
-.cards div{
+.header{
+    font-weight: bold;
+}
+
+.my-card{
     background-color: white;
     border-radius: 10px;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    padding: 2% 2% 2% 6%;
+    /* border: 10px;
+    border-style: solid;
+    border-color:transparent transparent transparent orange; */
+    background-image: linear-gradient(to left, rgba(0,0,0,0) 95%, orange 20%); 
+
+}
+
+.card-icons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+.card-icons img{
+    height: 30px;
+    width: auto;
+}
+
+.right-of-projects{
+    background-color: rgb(89, 86, 86);
+    /* box-shadow: 0px -3px 4px rgb(183, 167, 167); */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-right: 5%;
+    padding-left: 5%;
+
+}
+.a-box p{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+    font-size: .8rem;
+    border-bottom: 1px solid rgb(193, 184, 184);
+}
+
+.top-a{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.announcements{
+    display: flex;
+    flex-direction: column;
+   }
+
+.a-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    background-color: white;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+#header{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.my-trend{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.t-box{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.t-box{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.profile-group{
+    justify-self: flex-start;
 }
